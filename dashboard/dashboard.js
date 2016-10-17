@@ -2,10 +2,19 @@
 
 /*
 Questions:
-(1) What am I doing?
-(2)How am I doing it?
-(3)Why am I doing it this way?
+~What am I doing?
+()Search through the HTML document to find the amount of records in the table.
+~How am I doing it?
+(1)Access the HTML document
+(2)Search for the table the displays the Current Quarter Details data
+(3)ID the table rows for the Current Quarter Details table
+(4)Use length to count the amount of tr tags in the table setup
+~Why am I doing it this way?
 */
+//steps 1 - 3
+var tableRows = document.querySelectorAll('tbody > tr')
+//step 4
+    console.log(tableRows.length)
 
 //<----------------------------------------------------------------------->
 //<--------------End of Question (1)------------------------------------------>
@@ -14,11 +23,30 @@ Questions:
 
 /*
 Questions:
-(1) What am I doing?
-(2)How am I doing it?
-(3)Why am I doing it this way?
+~ What am I doing?
+()ID the dashboard images within the HTML document and change to the four seasons.  Add the alt verbiage as well.
+~ How am I doing it?
+(1)Search the HTML document for the dashboard images
+(2)Filter images into an array and update the various images
+(3)Add alt='' values for each image item
+~ Why am I doing it this way?
 */
 
+//Steps 1
+var dashboardImages = document.querySelectorAll('img')
+    console.log(dashboardImages);
+
+//step 2 - 3
+dashboardImages[0].setAttribute('src', 'http://unsplash.it/200/200?image=1020')
+dashboardImages[0].setAttribute('alt', 'image of winter')
+dashboardImages[1].setAttribute('src', 'http://unsplash.it/200/200?image=976')
+dashboardImages[1].setAttribute('alt', 'image of spring')
+dashboardImages[2].setAttribute('src', 'http://unsplash.it/200/200?image=1016')
+dashboardImages[2].setAttribute('alt', 'image of summer')
+dashboardImages[3].setAttribute('src', 'http://unsplash.it/200/200?image=1018')
+dashboardImages[3].setAttribute('alt', 'image of fall')
+
+//http://unsplash.it/200/200?random
 //<----------------------------------------------------------------------->
 //<--------------End of Question (2)------------------------------------------>
 
@@ -26,10 +54,16 @@ Questions:
 
 /*
 Questions:
-(1) What am I doing?
-(2)How am I doing it?
-(3)Why am I doing it this way?
+~ What am I doing?
+()Search for the dashboard images and find the tag with the three dots.  Update the dots with random numbers formatted for currency
+~ How am I doing it?
+()Search the HTML document for the tag that holds the three dots
+()Update the tag that holds the three dots with a random number
+()Format the random number for currency
+~ Why am I doing it this way?
 */
+
+
 
 //<----------------------------------------------------------------------->
 //<--------------End of Question (3)------------------------------------------>
@@ -38,9 +72,9 @@ Questions:
 
 /*
 Questions:
-(1) What am I doing?
-(2)How am I doing it?
-(3)Why am I doing it this way?
+~ What am I doing?
+~ How am I doing it?
+~ Why am I doing it this way?
 */
 
 //<----------------------------------------------------------------------->
@@ -50,9 +84,9 @@ Questions:
 
 /*
 Questions:
-(1) What am I doing?
-(2)How am I doing it?
-(3)Why am I doing it this way?
+~ What am I doing?
+~ How am I doing it?
+~ Why am I doing it this way?
 */
 
 //<----------------------------------------------------------------------->
@@ -62,9 +96,9 @@ Questions:
 
 /*
 Questions:
-(1) What am I doing?
-(2)How am I doing it?
-(3)Why am I doing it this way?
+~ What am I doing?
+~ How am I doing it?
+~ Why am I doing it this way?
 */
 
 //<----------------------------------------------------------------------->
@@ -74,9 +108,9 @@ Questions:
 
 /*
 Questions:
-(1) What am I doing?
-(2)How am I doing it?
-(3)Why am I doing it this way?
+~ What am I doing?
+~ How am I doing it?
+~ Why am I doing it this way?
 */
 
 //<----------------------------------------------------------------------->
@@ -86,9 +120,9 @@ Questions:
 
 /*
 Questions:
-(1) What am I doing?
-(2)How am I doing it?
-(3)Why am I doing it this way?
+~ What am I doing?
+~ How am I doing it?
+~ Why am I doing it this way?
 */
 
 //<----------------------------------------------------------------------->
@@ -98,9 +132,9 @@ Questions:
 
 /*
 Questions:
-(1) What am I doing?
-(2)How am I doing it?
-(3)Why am I doing it this way?
+~ What am I doing?
+~ How am I doing it?
+~ Why am I doing it this way?
 */
 
 //<----------------------------------------------------------------------->
@@ -110,9 +144,9 @@ Questions:
 
 /*
 Questions:
-(1) What am I doing?
-(2)How am I doing it?
-(3)Why am I doing it this way?
+~ What am I doing?
+~ How am I doing it?
+~ Why am I doing it this way?
 */
 
 //<----------------------------------------------------------------------->

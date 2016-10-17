@@ -3,13 +3,13 @@
 var  body = document.body
 console.log(body)
 
-//How to find the first h1 --> need to index
+//How to find the first h1 and display the tags and inner tag information --> need to index
 var h1 = document.body.childNodes[1]
 
 //console.log(h1[1]) or var h1 = document.body.childNodes[1]
 console.log(h1)
 
-//Use this to search inside HTML content
+//Use this to search inside HTML tag and the console.log retrieves the data inbetween the opening and closing tags.
 var helloWorld = h1.innerHTML
 console.log(helloWorld)
 

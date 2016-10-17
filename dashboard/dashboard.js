@@ -199,15 +199,36 @@ var updateThead = document.querySelectorAll('thead > tr > th');
 /*
 Questions:
 ~ What am I doing?
-()Search the HTML document for the table and focus on the body
-()Make the selection an array of objects separated by each row
-() Inner of row -> Remove the commas from the ID column and convert it to a Number(e.g. need Number() function)
+(1)Create an empty array to hold the objects we will create
+(2)Search the HTML document for the table and focus on the table rows in the table body
+(3)Create an empty object variable to hold the collection of items based on the table headers
+(4)Add dummy properties to the empty object variable to hold future items as we loop through the various objects in the array
+(5)Drill down from table> tbody> tr> td> to update dummy properties with values
+(6)Inner of row -> Remove the commas from the ID column and convert it to a Number(e.g. need Number() function)
 ~ How am I doing it?
 ~ Why am I doing it this way?
 */
 
-var arrayObjects = document.querySelectorAll('table > tbody');
-    console.log(arrayObjects);
+//step 1
+var rowObjects = []
+//step 2
+var arrayObjects = document.querySelectorAll('table > tbody > tr');
+    // console.log(arrayObjects);
+//step 3
+    arrayObjects.forEach(function(item){
+//step 4 - 5
+        var rowObject = {
+//step 6
+            id: Number(item.children[0].innerHTML.replace(',', '')),
+            firstName: item.children[1].innerHTML,
+            lastName: item.children[2].innerHTML,
+            department: item.children[3].innerHTML,
+            client: item.children[4].innerHTML,
+        };
+        rowObjects.push(rowObject);
+        // console.log(item.innerText);
+    });
+    console.log(rowObjects);
 
 //<----------------------------------------------------------------------->
 //<--------------End of Question (9)------------------------------------------>
@@ -234,6 +255,7 @@ var capitalizeItems = document.querySelectorAll('tbody > tr > td');
         item.classList.add('text-capitalize')
     })
     console.log(capitalizeItems);
+//Hide this temporarily
 
 //<----------------------------------------------------------------------->
 //<--------------End of Question (10)------------------------------------------>

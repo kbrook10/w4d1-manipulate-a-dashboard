@@ -154,16 +154,24 @@ Questions:
 
 //step 1
 var updateSuccess = document.querySelectorAll('tbody > tr');
+    updateSuccess.forEach(function(e){
+        if (e >= 7 && e <= 10){
+            e.classList.add('success');
+        }
+        else{
+            e
+        }
 
+    })
 //step 2 - 3
     // updateSuccess[7].setAttribute('class', 'success');
     // updateSuccess[8].setAttribute('class', 'success');
     // updateSuccess[9].setAttribute('class', 'success');
     // updateSuccess[10].setAttribute('class', 'success');
-    updateSuccess[7].classList.add('success');
-    updateSuccess[8].classList.add('success');
-    updateSuccess[9].classList.add('success');
-    updateSuccess[10].classList.add('success');
+    // updateSuccess[7].classList.add('success');
+    // updateSuccess[8].classList.add('success');
+    // updateSuccess[9].classList.add('success');
+    // updateSuccess[10].classList.add('success');
 
 
 //<----------------------------------------------------------------------->
@@ -216,9 +224,10 @@ var arrayObjects = document.querySelectorAll('table > tbody > tr');
     // console.log(arrayObjects);
 //step 3
     arrayObjects.forEach(function(item){
+        // console.log(item)
 //step 4 - 5
         var rowObject = {
-//step 6
+// //step 6
             id: Number(item.children[0].innerHTML.replace(',', '')),
             firstName: item.children[1].innerHTML,
             lastName: item.children[2].innerHTML,
@@ -226,7 +235,7 @@ var arrayObjects = document.querySelectorAll('table > tbody > tr');
             client: item.children[4].innerHTML,
         };
         rowObjects.push(rowObject);
-        // console.log(item.innerText);
+        // console.log(rowObject);
     });
     console.log(rowObjects);
 

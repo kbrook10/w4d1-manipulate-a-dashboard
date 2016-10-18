@@ -37,7 +37,11 @@ Questions:
 var dashboardImages = document.querySelectorAll('img');
     console.log(dashboardImages);
 //step 2 - 3
+    // var randomImage = 'http://unsplash.it/200/200?image=';
+    // var randomNum = Math.floor((Math.random()*1000) + 900);
+    // console.log(randomImage.concat(randomNum));
 dashboardImages[0].setAttribute('src', 'http://unsplash.it/200/200?image=1020');
+// dashboardImages[0].setAttribute('src', 'randomImage.concat(randomNum)');
 dashboardImages[0].setAttribute('alt', 'image of winter');
 dashboardImages[1].setAttribute('src', 'http://unsplash.it/200/200?image=976');
 dashboardImages[1].setAttribute('alt', 'image of spring');
@@ -154,8 +158,8 @@ Questions:
 
 //step 1
 var updateSuccess = document.querySelectorAll('tbody > tr');
-    updateSuccess.forEach(function(e){
-        if (e >= 7 && e <= 10){
+    updateSuccess.forEach(function(e, i){
+        if (i >= 7 && i <= 10){
             e.classList.add('success');
         }
         else{
